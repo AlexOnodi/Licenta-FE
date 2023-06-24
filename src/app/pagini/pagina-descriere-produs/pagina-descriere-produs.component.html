@@ -1,0 +1,104 @@
+
+<div class="pdp">
+
+<app-app-navbar></app-app-navbar>
+  
+<div class="container-pdp">
+
+<div class="container-poza-descriere">
+
+  <mat-card class="example-card5">
+
+    <div class="containere">
+
+      <div class="container-poza">
+
+        <div class="poza-produs">
+          
+          <!--<img src="/assets/card2.jpg" alt="p1">-->
+          <img src="{{produse2?.string_poza}}" alt="p1">
+  
+        </div>
+
+      </div>
+      <div class="container-descriere">
+
+        <div class="container-titlu">
+  
+          <div class="titlu-produs">
+    
+            <div class="titlu">{{produse2?.denumire}}</div>
+    
+          </div>
+          
+        </div>
+        <div class="container-descriere-produs">
+          
+          <div class="titlu-descriere">{{produse2?.tabela_descriere_entity_list[0]?.titlu_descriere}}</div>
+          
+          <div class="text-descriere">
+            
+            <div class="desc1" style="margin-top: 40px;">{{produse2?.tabela_descriere_entity_list[0]?.text_descriere}}</div>
+            <div class="desc2" style="margin-top: 20px;">{{produse2?.tabela_descriere_entity_list[1]?.text_descriere}}</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </mat-card>
+
+</div>
+
+<div class="container-optiune-produs">
+
+<mat-card class="example-card2">
+
+  <div class="date-generale">
+
+    <div class="date">
+
+      <div >Titlu : {{produse2?.denumire}}</div>
+      <div >Autor : {{produse2?.tabela_autor_entity_list[0].prenume}} {{produse2?.tabela_autor_entity_list[0].nume}}</div>
+      <div >Data adaugare : {{produse2?.data_adaugare|date}}</div>
+      <div></div>
+
+    </div>
+    
+  </div>
+  <div class="optiuni">
+
+    <mat-card-header  >
+      <mat-card-title-group>
+        <mat-card-title>Pret {{produse2?.pret}} {{valuta}}</mat-card-title>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+
+    <!--<div class="buton-cos"><button mat-raised-button color="primary"><mat-icon>shopping_cart</mat-icon>Adauga in cos</button></div>-->
+    <div class="buton-favorite"><button mat-raised-button color="primary" (click)="creare_favorite()"><mat-icon>favorite_border</mat-icon>Adauga la favorite</button></div>
+
+    </mat-card-content>
+
+  </div>
+
+
+</mat-card>
+
+</div>
+
+</div>
+ 
+</div>
+  
+  <!--<div>{{produse2.tabela_descriere_entity_list[0].text_descriere}}</div>-->
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+<h1 mat-dialog-title>Adaugare subcategorie</h1>
+
+<div mat-dialog-content>
+
+    <div class="campuri">
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Denumire subcategorie</mat-label>
+            <input matInput placeholder="Denumire subcategorie" [formControl]="campDenumireSubcategorie" [(ngModel)]="subcategorie.denumire_subcategorie">
+            
+        </mat-form-field>
+        <!--
+        <mat-form-field appearance="outline">
+
+            <mat-label>Denumire subcategorie</mat-label>
+            <input matInput placeholder="Denumire subcategorie" [formControl]="campIdCategorie" [(ngModel)]="subcategorie.tabela_categorie_entity_id">
+            
+        </mat-form-field>
+
+        -->
+        <!--
+            <mat-form-field appearance="outline" >
+
+                <mat-label>Categoria parinte</mat-label>
+                
+                    <mat-select placeholder="Categoria parinte" >
+    
+                       
+                            <mat-option *ngFor="let categorie of categorieLista">
+                                {{categorie.denumire_categorie}}
+                            </mat-option>
+                          
+        
+                    </mat-select>
+                
+            </mat-form-field>
+-->
+<!--[formControl]="campDenumireSubcategorie" [(ngModel)]="subcategorie.id_categorie-->
+            
+            <div>
+                <select name="Categoria" matInput placeholder="Denumire categorie" [formControl]="campIdCategorie" [(ngModel)]="subcategorie.tabela_categorie_entity_id">
+
+                    <input matInput placeholder="Denumire categorie" [formControl]="campIdCategorie" [(ngModel)]="subcategorie.tabela_categorie_entity_id"/>
+
+                    <option>--Select--</option>
+                    <option *ngFor="let categorie of categorieLista">{{categorie.id}}</option>
+
+                </select>
+                
+            </div>
+        
+        
+    </div>
+
+    <div mat-dialog-action [align]="'end'">
+
+        <button mat-raised-button color="warn" mat-dialog-close>Anulare</button>
+        <button style="margin-left: 10px;" mat-raised-button color="warn" (click)="adaugare_subcategorie()" (click)="inchide_dialog()">Salvare</button>
+
+    </div>
+    
+
+</div>

@@ -1,0 +1,56 @@
+<app-app-navbar></app-app-navbar>
+
+
+<div class="lista-favorite">
+
+    <!--prototip-card-produse-favorite-->
+     <div class="produse-favorite" >
+  
+        <div class="spatiu-produse" *ngFor="let cos1 of produse">
+
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>{{cos1.denumire}}</mat-card-title>
+                <mat-card-subtitle>{{cos1.pret}}</mat-card-subtitle>
+                <mat-card-subtitle>{{cantitate}}</mat-card-subtitle>
+                <mat-card-subtitle>{{cantitate*cos1.pret!}}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-actions align="end">
+                <button mat-button>Elimina</button>
+              </mat-card-actions>
+            </mat-card>
+
+          </div>
+  
+     </div>
+     
+     <div class="spatiu-plata">plata</div>
+
+  <!--
+  <div class="row py-5">
+    <div *ngFor="let favorit of produse2" class="col-lg-4 col-md-6">
+      <mat-card >
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{favorit.string_poza}}" alt="Photo of a Shiba Inu" style="aspect-ratio:1">
+        <mat-card-content>
+          <p>
+        {{favorit.denumire}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      </div>  
+  </div>
+ -->
+  
+  
+  
+
+</div>

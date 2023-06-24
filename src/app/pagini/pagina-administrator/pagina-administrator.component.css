@@ -1,0 +1,81 @@
+.administrator{
+
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+     background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url('../fundal/010.jpg');
+    
+
+}
+
+.meniu{
+    width: 100%;
+    height: auto;
+   
+    
+}
+
+
+.spatiere-optiuni-meniu{
+
+    position: relative;
+    margin-left: auto;
+    
+    
+}
+
+.spatiere-optiuni-meniu a{
+
+    position: relative;
+    margin-right: 20px;
+    
+}
+
+.spatiere-optiuni-meniu a:hover{
+
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+mat-toolbar{
+
+    width: 100%;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    background-color: rgb(255, 255, 255, 0.4);
+
+    
+}
+
+.continut{
+
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+}
+  
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.utilizator{
+
+    margin-top: 30px;
+
+}
+
+.spatiu{
+
+    margin-top: 100px;
+    color: transparent;
+}
+  
+ 

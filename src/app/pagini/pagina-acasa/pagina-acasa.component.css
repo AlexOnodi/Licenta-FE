@@ -1,0 +1,518 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+.fundal{
+    width: 100%;
+    height: 87vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(255, 255, 255, 0.1)),url('../fundal/wellcome5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.spatiere-optiuni-meniu{
+
+    position: relative;
+    margin-left: auto;
+    
+}
+
+.spatiere-optiuni-meniu a{
+
+    position: relative;
+    margin-right: 20px;
+    
+    
+}
+
+.spatiere-optiuni-meniu a:hover{
+
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+   
+}
+
+
+
+.mesaj{
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    width: 65%;
+    padding: 40px 0;
+    text-align: center;
+    border-top-left-radius: 100px ;
+    border-bottom-right-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 5px inset rgb(255, 255, 255);
+    
+
+}
+
+
+.mesaj .mesaj-principal{
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    font-size: 40px;
+
+    text-transform: uppercase;
+
+}
+
+.mesaj .mesaj-principal p{
+
+    padding: 0.8%;
+    font-family:merienda;
+
+}
+
+.mesaj .mesaj-secundar{
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    margin-top: 30px;
+
+   font-size: medium;
+
+}
+
+.mesaj .mesaj-secundar p{
+
+    padding: 0.8%;
+    font-family:merienda;
+
+}
+
+
+/*card_fain*/
+
+.pagina-produse{
+
+    box-sizing: border-box;
+    font-family:sans-serif;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+    gap: 15px;
+
+}
+
+.container{
+
+    display: flex;
+    margin-left: 5px;
+    width: 70%;
+    
+}
+
+.cautare-produs{
+
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));
+    gap: 15px;
+    margin-top: 50px;
+}
+
+
+.card{
+
+
+    width: 260px;
+    height: 400px;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    align-items:center;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    
+
+}
+
+.card:hover{
+
+    transform: translateY(3px);
+
+}
+
+.card:before{
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,176,155,0.5),rgba(150,201,61,1));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+
+}
+
+.card:hover:before{
+
+    opacity: 1;
+}
+
+.card img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.card .informatii{
+
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+    margin-top: auto;
+
+}
+
+.card:hover .informatii{
+
+    opacity: 1;
+    transform: translateY(0px);
+
+}
+
+.card .informatii h1{
+
+    margin: 0;
+
+}
+
+.card .informatii p{
+
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+
+}
+
+.card .informatii .buton{
+
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+
+}
+
+.card .informatii .buton:hover{
+
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+
+}
+
+mat-grid-tile {
+    background: lightblue;
+}
+
+.buton-produse{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    text-transform: uppercase;
+   
+
+}
+
+.buton-contact{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    text-transform: uppercase;
+
+}
+
+.buton-despre-noi{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    text-transform: uppercase;
+
+}
+
+.buton-start{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    text-transform: uppercase;
+
+}
+
+mat-card{
+
+    width: 100%;
+    height: 100%;
+    color:white;
+    border-radius: 0;
+    background-color: black;
+    text-align: center;
+
+}
+
+mat-form-field{
+
+    width: 100%;
+    height:100%;
+}
+
+.sectiune4{
+
+    margin-top: 50px;
+
+}
+
+.gol{
+
+    height: 50px;
+    width: 100%;
+    background-color: whitesmoke;
+
+}
+
+
+/*---------------------------------------*/
+
+
+/*pt carduri la produse*/
+/*
+.example-card {
+    max-width: 300px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+  }
+  
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+button {
+  background: rgb(65, 58, 163);
+  padding: 10px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  margin: -1px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover {
+  background: #fff;
+  color: rgb(65, 58, 163);
+  transition: all .4s ease-in-out;
+}
+
+.add {
+  width: 67%;
+}
+
+.like {
+  width: 22%;
+}
+
+.container{
+
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+
+}
+
+
+@media screen and (max-width:1200px) {
+
+    .example-card{
+
+        width: 40%;
+
+    }
+    
+}
+*/
+
+
+.imagini{
+
+    border: 2px solid;
+    width: 100%;
+    height: 400px;
+
+    background-image: url('../fundal/004.jpg');
+
+}
+
+.continut{
+
+    padding: 16px;
+    position: relative;
+
+    display:flex;
+}
+
+
+.example-card {
+    max-width: 200px;
+}
+
+.mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+  }
+
+
+@media screen and (max-width:600px) {
+
+    .example-card{
+
+        width: 40%;
+
+    }
+    
+}
+
+/* pt footer pagina acasa*/
+.footer{
+
+    background-color: #24262b;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;padding: 70px 0;
+    
+}
+
+.coloane-footer{
+
+    width: 25%;
+    padding: 0 15px;
+    
+
+}
+
+.coloane-footer h4{
+
+    font-size: 18px;
+    color:#ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+
+}
+
+.coloane-footer h4::before{
+
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:-10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+
+}
+
+
+.container1{
+
+    max-width: 1170px;
+    background-color: transparent;
+    margin: auto;
+
+}
+
+ul{
+
+    list-style: none;
+    padding: 0;
+
+}
+
+.rand{
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.coloane-footer ul li:not(:last-child){
+
+    margin-bottom: 10px;
+
+}
+
+.coloane-footer ul li a{
+
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color:#bbbbbb;
+    display: block;
+    transition: all 0.5s ease;
+
+}
+
+.coloane-footer ul li a:hover{
+
+    color: #ffffff;
+    padding-left: 10px;
+
+}
+
+
+
+  
+  
+
+

@@ -1,0 +1,162 @@
+<div class="administrator">
+
+  
+  <mat-toolbar>
+
+
+    <div class="logo">
+  
+      <span><mat-icon>eco</mat-icon>Cartea Ta Administrator</span>
+  
+    </div>
+  
+    <div class="spatiere-optiuni-meniu">
+    
+      <a mat-button [matMenuTriggerFor]="menu"><mat-icon>settings</mat-icon>Creare</a>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="dialog_creare_categorie()">Categorie</button>
+        <button mat-menu-item (click)="dialog_creare_subcategorie()">Subcategorie</button>
+        <button mat-menu-item (click)="formular_adaugare_produs_admin()">Produs</button>
+        <button mat-menu-item (click)="dialog_creare_descriere()">Descriere produs</button>
+        <button mat-menu-item (click)="dialog_creare_autor()">Autor</button>
+
+      </mat-menu>
+
+      <a routerLink="/pagina-acasa" mat-button ><mat-icon>exit_to_app</mat-icon>Deconectare</a>
+    
+    </div>
+    
+</mat-toolbar>
+
+
+
+<div class="continut">
+  
+  <mat-tab-group>
+    
+    <mat-tab label="Gestionare categorie">
+
+      <app-pagina-tabel-categorie></app-pagina-tabel-categorie>
+       
+     </mat-tab>
+
+     <mat-tab label="Gestionare subcategorie">
+
+      <app-pagina-tabel-subcategorie></app-pagina-tabel-subcategorie>
+
+     </mat-tab>
+
+    <mat-tab label="Gestionare produse">
+
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilterProdus($event)" placeholder="Ex. Produs" #input>
+        </mat-form-field>
+        
+        <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+        
+         
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+            <td mat-cell *matCellDef="let produs"> {{produs.id}} </td>
+          </ng-container>
+        
+         
+          <ng-container matColumnDef="denumire_produs">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Denumire produs </th>
+            <td mat-cell *matCellDef="let produs"> {{produs.denumire}} </td>
+          </ng-container>
+        
+          
+          <ng-container matColumnDef="data_adaugare">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Data adaugare </th>
+            <td mat-cell *matCellDef="let produs"> {{produs.data_adaugare | date}} </td>
+          </ng-container>
+        
+         
+          <ng-container matColumnDef="string_poza">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Poza </th>
+            <td mat-cell *matCellDef="let produs"> {{produs.string_poza}} </td>
+          </ng-container>
+          
+        
+          <ng-container matColumnDef="comenzi">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Comenzi </th>
+            <td mat-cell *matCellDef="let produs">
+        
+              <button mat-button color="primary" (click)="actualizare_produs(produs)">
+        
+                <mat-icon>edit</mat-icon>
+        
+              </button>
+        
+              <button mat-button color="warn" (click)="stergere_produs(produs.id)">
+        
+                <mat-icon>delete</mat-icon>
+        
+              </button>
+        
+            </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let produs; columns: displayedColumns;"></tr>
+        
+          
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">Nu s-a gasit date care sa se potriveasca cautarii dvs."{{input.value}}"</td>
+          </tr>
+        </table>
+        
+        <mat-paginator [pageSizeOptions]="[5, 10]" aria-label="Select page of users"></mat-paginator>
+        </div>
+
+    </mat-tab>
+
+    <mat-tab label="Gestionare descriere produs">
+
+      <app-pagina-tabel-descriere></app-pagina-tabel-descriere>
+
+    </mat-tab>
+
+    <mat-tab label="Gestionare autor">
+
+      <app-pagina-tabel-autor></app-pagina-tabel-autor>
+
+    </mat-tab>
+
+    
+    
+  </mat-tab-group>
+
+
+  <div class="utilizator">
+
+    <mat-tab-group>
+      <mat-tab label="Gestionare utilizator">
+
+        <app-pagina-tabel-utilizator></app-pagina-tabel-utilizator>
+
+      </mat-tab>
+
+      <mat-tab label="Gestionare rol utilizator">
+
+        <app-pagina-tabel-rol-utilizator></app-pagina-tabel-rol-utilizator>
+
+      </mat-tab>
+
+      <mat-tab label="Gestionare adresa">
+
+        <app-pagina-tabel-adresa></app-pagina-tabel-adresa>
+
+      </mat-tab>
+    </mat-tab-group>
+
+  </div>
+
+  <div class="spatiu">:></div>
+
+</div>
+
+</div>

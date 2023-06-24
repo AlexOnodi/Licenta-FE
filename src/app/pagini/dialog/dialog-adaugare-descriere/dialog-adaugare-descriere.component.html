@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>Adaugare descriere produs</h1>
+
+<div mat-dialog-content [formGroup]="dialog_creare_descriere" >
+
+    <div class="campuri">
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Titlu descriere</mat-label>
+            <input [formControl]="campTitluDescriere" [(ngModel)]="descriere.titlu_descriere" matInput placeholder="Titlu descriere"/>
+            
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Text descriere</mat-label>
+            <input [formControl]="campTextDescriere" [(ngModel)]="descriere.text_descriere" matInput placeholder="Text descriere"/>
+            
+        </mat-form-field>
+
+        <div>
+
+            <select name="Subcategorie" matInput placeholder="Denumire subcategorie" [formControl]="campIdProdus" [(ngModel)]="descriere.tabela_produs_entity_id">
+
+                <input matInput placeholder="Denumire subcategorie" [formControl]="campIdProdus" [(ngModel)]="descriere.tabela_produs_entity_id"/>
+                <option>--Select--</option>
+                <option *ngFor="let produse of produseLista">{{produse.id}}</option>
+
+            </select>
+
+        </div>
+
+
+    </div>
+
+    <div mat-dialog-action [align]="'end'">
+
+        <button mat-raised-button color="warn" mat-dialog-close>Anulare</button>
+        <button style="margin-left: 10px;" mat-raised-button color="warn" (click)="adaugare_descriere()" (click)="inchide_dialog()">Salvare</button>
+
+    </div>
+    
+
+</div>

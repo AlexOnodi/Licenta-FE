@@ -1,0 +1,374 @@
+/*
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.fundal{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.75)),url('../fundal/004.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+.continut{
+
+    position: relative;
+    border: 2px solid;
+    border-color: aliceblue;
+    height: 300px;
+    width: 900px;
+    margin-top: 200px;
+    margin-left: 325px;
+
+}
+
+.text1{
+    color: #edf0f1;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 230px;
+}
+
+
+.text2{
+    color: #edf0f1;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 15px;
+}
+
+
+.buton{
+
+    position:relative;
+    margin-top: 190px;
+    margin-left: 190px;
+  
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:all 0.3s ease 0s;
+}
+
+
+button:hover{
+
+    background-color: rgba(0,136,169,0.8);
+}
+
+.logo{
+
+    color: aliceblue;
+}
+*/
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+.fundal{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(255, 255, 255, 0.1)),url('../fundal/wellcome5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.spatiere-optiuni-meniu{
+
+    position: relative;
+    margin-left: auto;
+    
+}
+
+.spatiere-optiuni-meniu a{
+
+    position: relative;
+    margin-right: 20px;
+    
+    
+}
+
+.spatiere-optiuni-meniu a:hover{
+
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+   
+}
+
+mat-toolbar{
+
+    width: 100%;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+
+.mesaj{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    width: 70%;
+    padding: 40px 0;
+    text-align: center;
+    border-top-left-radius: 100px ;
+    border-bottom-right-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 5px inset rgb(255, 255, 255);
+    
+
+}
+
+
+.mesaj .mesaj-principal{
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    font-size: 40px;
+
+    text-transform: uppercase;
+
+}
+
+.mesaj .mesaj-principal p{
+
+    padding: 0.8%;
+    font-family:merienda;
+
+}
+
+.mesaj .mesaj-secundar{
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    margin-top: 30px;
+
+   font-size: medium;
+
+}
+
+.mesaj .mesaj-secundar p{
+
+    padding: 0.8%;
+    font-family:merienda;
+
+}
+
+.continut{
+
+    width: 100%;
+    max-width:auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border:2px solid;
+    border-color: rgba(255, 255, 255, 0.7); ;
+    padding: 50px 60px 70px;
+    max-height: auto;
+
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)),url('../fundal/004.jpg');
+    background-size: cover;
+
+}
+
+.continut H1 p{
+
+    margin-left: 700px;
+    color: white;
+
+}
+
+.buton{
+
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+button{
+    
+    position: relative;
+    max-width: 220px;
+    width: 100%;
+    padding: 9px 25px;
+    background-color:  rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    cursor: pointer;
+    transition:all 0.3s ease 0s;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+    text-transform: uppercase;
+    border: none;
+    
+}
+
+button:hover{
+
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+
+
+
+
+
+/*
+body{
+
+    margin: 0;
+    padding: 0;
+}
+
+.bara-navigare{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+
+}
+
+.logo{
+
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.bara-navigare-optiuni ul{
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.bara-navigare-optiuni li{
+
+    list-style: none;
+}
+
+.bara-navigare-optiuni li a{
+
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.bara-navigare-optiuni li:hover{
+
+    background-color: #555;
+}
+
+.icoana-meniu{
+
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.icoana-meniu .bara{
+
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+.continut{
+
+    position: relative;
+    border: 2px solid;
+    border-color: aliceblue;
+    height: 300px;
+    width: 900px;
+    margin-top: 200px;
+    margin-left: 325px;
+
+}
+
+.text1{
+    color: #edf0f1;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 230px;
+}
+
+
+.text2{
+    color: #edf0f1;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 15px;
+}
+
+.buton{
+
+    position:relative;
+    margin-top: 190px;
+    margin-left: 190px;
+    
+  
+}
+
+button{
+    padding: 9px 25px;
+    background-color:  rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:all 0.3s ease 0s;
+}
+
+.buton a button{
+
+    color: #edf0f1;
+}
+
+button:hover{
+
+    background-color:  #555;
+}
+
+*/

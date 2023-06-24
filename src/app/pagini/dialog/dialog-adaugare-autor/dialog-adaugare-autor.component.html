@@ -1,0 +1,45 @@
+<h1 mat-dialog-title>Adaugare autor</h1>
+
+<div mat-dialog-content [formGroup]="dialog_creare_autor" >
+
+    <div class="campuri">
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Nume</mat-label>
+            <input [formControl]="campNume" [(ngModel)]="autor.nume" matInput placeholder="Nume"/>
+            
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Prenume</mat-label>
+            <input [formControl]="campPrenume" [(ngModel)]="autor.prenume" matInput placeholder="Prenume"/>
+            
+        </mat-form-field>
+
+        <div>
+
+            <select name="Produs" matInput placeholder="Denumire produs" [formControl]="campIdProdus" [(ngModel)]="autor.tabela_produs_entity_id">
+
+                <input matInput placeholder="Denumire produs" [formControl]="campIdProdus" [(ngModel)]="autor.tabela_produs_entity_id"/>
+                <option>--Select--</option>
+                <option *ngFor="let produse of produseLista">{{produse.id}}</option>
+
+            </select>
+
+        </div>
+
+
+    </div>
+
+    <div mat-dialog-action [align]="'end'">
+
+        <button mat-raised-button color="warn" mat-dialog-close>Anulare</button>
+        <button style="margin-left: 10px;" mat-raised-button color="warn" (click)="adaugare_autor()" (click)="inchide_dialog()" >Salvare</button>
+
+    </div>
+    
+
+</div>
+

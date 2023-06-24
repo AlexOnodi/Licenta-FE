@@ -1,0 +1,16 @@
+<div class="lista-favorite">
+    <mat-toolbar>
+      <div class="logo" style="cursor: pointer;">
+        <span routerLink="/pagina-acasa"><mat-icon>eco</mat-icon>Cartea Ta</span>
+      </div>
+    
+      <div class="spatiere-optiuni-meniu">
+      
+        <a routerLink="/pagina-lista-favorite" mat-button matBadge="{{counter}}" matBadgePosition="before" matBadgeColor="primary"><mat-icon>favorite_border</mat-icon>Favorite</a>
+        <!--<a routerLink="/pagina-cos" mat-button matBadge="{{counter_cos}}" matBadgePosition="before" matBadgeColor="primary"><mat-icon>shopping_basket</mat-icon>Cos</a>-->
+        <a mat-button (click)="tip_conectare_utilizator()"><mat-icon>account_circle</mat-icon>Utilizator</a>
+    
+      </div>
+    
+    </mat-toolbar>
+</div>

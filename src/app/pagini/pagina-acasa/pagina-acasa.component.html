@@ -1,0 +1,226 @@
+
+<div class="pagina">
+
+
+<div class="fundal">
+
+  <app-app-navbar></app-app-navbar>
+
+  <div class="mesaj">
+
+    <h1 class="mesaj-principal"><p>Hai sa descoperi o gama variata de genuri literare</p></h1>
+    <h2 class="mesaj-secundar"><p> La noi o sa gasesti carti la cel mai bun pret de pe piata</p></h2>
+
+</div>
+
+  
+</div>
+
+
+
+ 
+  <section id="sectiune 3">
+
+    <mat-grid-list cols="4" rowHeight="4:1">
+
+      <mat-grid-tile>
+
+        <button mat-flat-button class="buton-produse" color="primary" (click)="sectiune1()" routerLink="/sectiune1">Produse</button>
+
+      </mat-grid-tile>
+      <mat-grid-tile>
+
+        <button mat-flat-button class="buton-contact" color="accent" (click)="sectiune4()" routerLink="/sectiune4">Contact</button>
+
+      </mat-grid-tile>
+      <mat-grid-tile>
+
+        <button mat-flat-button class="buton-despre-noi" color="warn" (click)="sectiune4()" routerLink="/sectiune4">Despre noi</button>
+
+      </mat-grid-tile>
+      <mat-grid-tile>
+
+        <button mat-flat-button class="buton-start" color="primary" routerLink="pagina-start">Start</button>
+
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
+  </section>
+
+
+  <section id="sectiune5" style="background: whitesmoke;">
+
+    <!--oferta-->
+
+  </section>
+
+  <section id="sectiune1" style="margin-top: 30px;">
+
+    <div class="bara-cautare" style="background-color: whitesmoke;">
+
+      <mat-form-field appearance="outline" [formGroup]="cautare_cuvant">
+        <mat-label>Cauta produs</mat-label>
+        <input matInput #produsCautat  placeholder="Cauta produs" formControlName="cauta">  
+      </mat-form-field>
+
+    </div>
+  
+
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Categori
+            </mat-panel-title>
+            <mat-panel-description>
+              <!--ceva de bagat in caz de -->
+            </mat-panel-description>
+              </mat-expansion-panel-header>
+
+              <mat-chip-listbox aria-label="Fish selection" (click)="afisare_categorie_specifica('Eduvativ')" [formGroup]="cautare_categorie">
+
+                <mat-chip-option *ngFor="let categorie of categorie" formControlName="categorie?.denumire">{{categorie?.denumire}}</mat-chip-option>
+              
+              </mat-chip-listbox>
+              
+              <mat-chip-listbox aria-label="Fish selection" *ngIf="arata_subcategorie">
+
+                <mat-chip-option *ngFor="let subcategorie of subcategorie1">{{subcategorie?.denumire_subcategorie}}</mat-chip-option>
+              
+              </mat-chip-listbox>
+             
+              <mat-chip-listbox aria-label="Fish selection" *ngIf="arata_subcategorie">
+
+                
+              
+              </mat-chip-listbox>
+            
+
+              </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+      
+        </mat-expansion-panel>
+      </mat-accordion>
+
+    
+    
+    <div class="pagina-produse" >  
+
+        <div class="container" *ngFor="let produs of lista_produse" ><!--*ngFor="let produs of produse"-->
+
+          <div class="cautare-produs">
+  
+            <div class="card">
+    
+              <!--<img src="/assets/card2.jpg" alt="card1">-->
+              <img src="{{produs?.string_poza}}" alt="card1">
+  
+              <div class="informatii">
+  
+                  <h1>{{produs.denumire}}</h1>
+                  <p>{{produs.denumire}} e o carte interesanta...</p>
+                  <a routerLink="/pdp/{{produs.id}}"  class="buton" >Descopera</a>
+  
+              </div>
+  
+          </div>
+  
+          </div>
+            
+    
+        </div>
+
+      </div>
+
+ 
+
+     
+ 
+
+  
+
+  </section>
+
+<div class="gol"></div>
+ 
+ <section id="sectiune4">
+
+ <div class="footer">
+
+  <div class="container1">
+
+    <div class="rand">
+
+      <div class="coloane-footer">
+
+        <h4>Cartea Ta </h4>
+        <ul>
+
+          <li><a href="#">despre noi</a></li>
+          <li><a href="#">servicii oferite</a></li>
+          <li><a href="#">termeni</a></li>
+
+        </ul>
+
+      </div>
+
+      <div class="coloane-footer">
+
+        <h4>Ghid</h4>
+        <ul>
+
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">returnari</a></li>
+
+        </ul>
+
+      </div>
+
+      <div class="coloane-footer">
+
+        <h4>Contact</h4>
+        <ul>
+
+          <li><a href="#">email</a></li>
+          <li><a href="#">telefon</a></li>
+
+
+        </ul>
+
+      </div>
+
+      <div class="coloane-footer">
+
+        <h4>Urmareste-ne</h4>
+        <ul>
+
+          <li><a href="#">facebook</a></li>
+          <li><a href="#">twitter</a></li>
+          <li><a href="#">linkedin</a></li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+ </div>
+
+</section>
+
+</div>
+
+
+
+
+    
+
+
+  
+
+
+

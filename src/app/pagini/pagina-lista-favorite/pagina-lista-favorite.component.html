@@ -1,0 +1,52 @@
+<app-app-navbar></app-app-navbar>
+
+
+<div class="lista-favorite">
+
+
+    <!--prototip-card-produse-favorite
+     <div class="produse-favorite" >
+  
+        <div class="spatiu-produse" *ngFor="let favorit of produse2">
+
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{favorit.denumire}}</mat-card-title>
+              <mat-card-subtitle>End</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions align="end">
+              <button mat-button>Sterge</button>
+              <button mat-button>Adauga in cos</button>
+            </mat-card-actions>
+          </mat-card>
+
+        </div>
+        
+  
+     </div>
+     
+     <div class="spatiu-plata">plata</div>
+-->
+
+  <div class="row py-5" style="gap: 5px;display: flex; justify-content: center; row-gap: 30px;">
+    <div *ngFor="let favorit of produse2" class="col-lg-4 col-md-6">
+      <mat-card >
+        <mat-card-header style="display: flex; justify-content: center;">
+          <mat-card-title style="font-size: 15px;">{{favorit.denumire}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{favorit.string_poza}}" alt="Photo of a Shiba Inu" style="aspect-ratio:1">
+        <mat-card-content style="margin-top: 30px;text-align: center;">
+          <p>Pret {{favorit.pret}} {{valuta}}</p>
+        </mat-card-content>
+        <mat-card-actions style="margin-top: 10px;display: flex; justify-content: center;">
+          <button mat-button (click)="stergere_produs_favorit(id_favorit!)">Elimina</button>
+          
+        </mat-card-actions>
+      </mat-card>
+      </div>  
+  </div>
+ 
+  
+
+</div>
+

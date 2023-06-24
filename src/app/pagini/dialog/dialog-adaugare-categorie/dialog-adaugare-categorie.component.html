@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Adaugare categorie</h1>
+
+<div mat-dialog-content [formGroup]="dialog_creare_categorie" >
+
+    <div class="campuri">
+
+        <mat-form-field appearance="outline">
+
+            <mat-label>Denumire categorie</mat-label>
+            <input [formControl]="campDenumireCategorie" [(ngModel)]="categorie.denumire" matInput placeholder="Denumire categorie"/>
+            
+        </mat-form-field>
+
+    </div>
+
+    <div mat-dialog-action [align]="'end'">
+
+        <button mat-raised-button color="warn" mat-dialog-close>Anulare</button>
+        <button style="margin-left: 10px;" mat-raised-button color="warn" (click)="adaugare_categorie()" (click)="inchide_dialog()">Salvare</button>
+
+    </div>
+    
+
+</div>

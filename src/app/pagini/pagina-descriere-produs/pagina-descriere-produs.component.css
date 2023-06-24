@@ -1,0 +1,266 @@
+.pdp{
+
+    height: 100%;
+    width: 100%;
+    /*border: 1px solid red;*/
+    background-image: url('../fundal/back-pdp.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.container-pdp{
+
+    display: flex;
+    height: 80%;
+    /*border: 1px solid black;*/
+    
+
+}
+
+.container-recomandate{
+
+    background-color: whitesmoke;
+    height: auto;
+    width: 100%;
+}
+
+/*
+.container-poza{
+
+    border: 1px solid black;
+    height: 100%;
+    flex:0.5;
+}
+*/
+.container-poza{
+
+    /*border: 1px solid black;*/
+    height: 100%;
+    flex: 0.6;
+}
+
+.poza-produs{
+
+    /*border: 1px solid black;*/
+    max-width: 65%;
+    height:100% ;
+    max-height: 70%;
+    align-items: flex-end;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 15%;
+  
+}
+
+.poza-produs img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+/*.container-descriere{
+
+    border: 1px solid black;
+    height: 100%;
+    flex:0.7;
+}
+*/
+
+.container-descriere{
+
+    /*border: 1px solid black;*/
+    height: 100%;
+    flex: 1;
+}
+
+
+
+.container-optiune-produs{
+
+    /*border:1px solid black;*/
+    height: 100%;
+    /*flex:0.5*/
+    flex:0.5;
+    
+}
+
+.container-poza-descriere{
+
+    /*border: 1px solid black;*/
+    flex:1.5;
+}
+
+.container-titlu{
+
+    
+    height: 20%;
+}
+
+.titlu-produs{
+
+    margin-top: 11%;
+    font-size: 50px;
+    height: 100px;
+    font-size: 45px;
+}
+
+.autor-produs{
+
+    margin-top: 30px;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.container-descriere-produs{
+
+    /*border:1px solid black;*/
+    height: 70%;
+}
+
+.container-optiune{
+
+    height: 20%;
+}
+
+.date-generale{
+
+    height: 40%;
+    margin-bottom: auto;
+    flex-direction: column;
+
+}
+
+.date{
+
+    margin-top: 40px;
+    margin-left: 90px;
+    font-size:medium;
+
+}
+
+.titlu-descriere{
+
+    font-size: 30px;
+}
+
+.text-descriere{
+
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.optiuni{
+
+    height: 60%;
+}
+
+.example-card {
+
+    max-width: 400px;
+    margin-bottom: 8px;
+    margin-top: 150px;
+    height: 230px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.example-card2 {
+
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+}
+
+.example-card3{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0;
+}
+
+.example-card4{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0;
+
+}
+
+.example-card5{
+
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 0;
+    
+
+}
+
+.containere{
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.buton-cos{
+
+    margin-top: 40px;
+    height: 40px;
+}
+
+.buton-favorite{
+
+    height: 40px;
+    margin-top: 20px;
+}
+
+button{
+
+    width: 100%;
+    
+    
+}
+.icon{
+
+    display: flex;
+}
+
+.spatiere-optiuni-meniu{
+
+    position: relative;
+    margin-left: auto;
+    
+}
+
+.spatiere-optiuni-meniu a{
+
+    position: relative;
+    margin-right: 20px;
+    
+    
+}
+
+.spatiere-optiuni-meniu a:hover{
+
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+   
+}
+
+mat-toolbar{
+
+    width: 100%;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    background-color: rgba(255, 255, 255, 0.6);
+}
